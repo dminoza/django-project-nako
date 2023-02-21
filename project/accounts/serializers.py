@@ -58,6 +58,7 @@ class CustomUserCreateSerializer(UserCreateSerializer):
             raise serializers.ValidationError(
                 {"password": serializer_error["non_field_errors"]}
             )
+        #TODO password strength dapat choi!
 
         return attrs
     
