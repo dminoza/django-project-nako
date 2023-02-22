@@ -30,8 +30,6 @@ class CustomUserCreateSerializer(UserCreateSerializer):
         )
 
     def clean_profile_data(self, validated_data):
-        print('mao ni naay bug?')
-        print(validated_data)
         return {
             'birthdate' : validated_data.get('birthdate', ''),
             'gender' : validated_data.get('gender', '')
